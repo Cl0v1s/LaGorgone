@@ -1,6 +1,6 @@
 body {
     background-color: #191919;
-    background-image: url('./static/bg.png');
+    background-image: url('./../static/bg.png');
 }
 
 
@@ -25,7 +25,7 @@ h1
 
 div.jade
 {
-    background-image: url("./static/jade.png");
+    background-image: url("./../static/jade.png");
     width: 170px;
     height: 500px;
     position: fixed;
@@ -46,7 +46,7 @@ div.jade
 
 div.jadouste
 {
-    background-image: url('./static/jade.png');
+    background-image: url('./../static/jade.png');
     width: 170px;
     height: 500px;
     position: fixed;
