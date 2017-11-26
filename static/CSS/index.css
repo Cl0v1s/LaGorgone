@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Belladona";
+  src: url("/static/Belladona.otf") format("otf"); }
+
+body {
+  background-color: #191919; }
+
+h1, h2 {
+  font-family: "Belladona" !important; }
+  h1 a, h2 a {
+    text-decoration: none;
+    color: #07FFAA; }
+
+h1 {
+  display: inline-block;
+  margin: 20px;
+  letter-spacing: 5;
+  font-size: 30px;
+  color: #07FFAA; }
+
+app-article div.article, div[data-is=app-article] div.article {
+  display: block;
+  margin: auto;
+  max-width: 520px;
+  text-align: center;
+  margin-top: 20px; }
+  app-article div.article div.picture, div[data-is=app-article] div.article div.picture {
+    height: 120px;
+    background-size: 0 0;
+    position: relative;
+    overflow: hidden; }
+    app-article div.article div.picture::before, div[data-is=app-article] div.article div.picture::before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: inherit;
+      background-size: cover;
+      filter: blur(20px);
+      position: absolute; }
+    app-article div.article div.picture h2, div[data-is=app-article] div.article div.picture h2 {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 30px;
+      line-height: 35px;
+      min-width: 80%; }
+  app-article div.article div.content, div[data-is=app-article] div.article div.content {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 18px;
+    color: #D6D6D6;
+    font-family: "Segoe UI";
+    text-align: justify;
+    line-height: 25px; }
+
+app-articleitem {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 20px;
+  cursor: pointer; }
+  app-articleitem h2 {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    transform: translateY(-50%);
+    line-height: 22px; }
+  app-articleitem div.picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 0; }
+    app-articleitem div.picture:hover::before {
+      -webkit-filter: none;
+      filter: none; }
+    app-articleitem div.picture:hover::after {
+      background: none; }
+    app-articleitem div.picture::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      background-image: inherit;
+      background-size: cover;
+      background-position: center; }
+    app-articleitem div.picture::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      background: linear-gradient(to top, #007180, #07FFAA); }
+
+app-articlelist {
+  display: block;
+  margin: auto;
+  max-width: 520px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 5px solid #07FFAA;
+  border-bottom: 5px solid #007180; }
+
+/*Popin*/
+﻿div#popin {
+  position: fixed;
+  width: 90%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  display: none; }
+
+div#popin.visible {
+  display: block; }
