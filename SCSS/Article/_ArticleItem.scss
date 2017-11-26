@@ -60,6 +60,8 @@ app-articleitem
             background-image: inherit;
             background-size: cover;
             background-position: center;
+
+            transition: all 1s ease;
         }
 
         &::after
