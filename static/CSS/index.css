@@ -45,9 +45,7 @@ table {
 
 @font-face {
   font-family: "Belladona";
-  src: url("./../Belladona.otf") format("truetype");
-}
-
+  src: url("./../Belladona.otf") format("truetype"); }
 
 body {
   background-color: #191919;
@@ -59,6 +57,12 @@ h1, h2 {
     text-decoration: none;
     color: #07FFAA; }
 
+app-header {
+  display: block; }
+  @media screen and (max-width: 860px) {
+    app-header {
+      text-align: center; } }
+
 h1 {
   display: inline-block;
   margin: 20px;
@@ -69,13 +73,14 @@ h1 {
 div.jade {
   background-image: url("./../jade.png");
   width: 170px;
-  height: 500px;
+  height: 250px;
   position: fixed;
   top: 50%;
   right: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  transform: translateY(-50%); }
+  background-size: auto 100%;
+  transform: translateY(-50%);
+  background-position: 80px; }
   @media screen and (max-height: 630px) {
     div.jade {
       display: none; } }
@@ -86,14 +91,14 @@ div.jade {
 div.jadouste {
   background-image: url("./../jade.png");
   width: 170px;
-  height: 500px;
+  height: 250px;
   position: fixed;
   top: 50%;
   left: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  transform: translateY(-50%);
-  background-position: 100%; }
+  background-size: auto 100%;
+  transform: translateY(-50%) rotateY(180deg);
+  background-position: 80px; }
   @media screen and (max-height: 630px) {
     div.jadouste {
       display: none; } }
@@ -106,12 +111,15 @@ app-article div.article, div[data-is=app-article] div.article {
   margin: auto;
   max-width: 520px;
   text-align: center;
-  margin-top: 20px; }
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 2px; }
   app-article div.article div.picture, div[data-is=app-article] div.article div.picture {
-    height: 120px;
+    height: 240px;
     background-size: 0 0;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
     app-article div.article div.picture::before, div[data-is=app-article] div.article div.picture::before {
       content: "";
       top: 0;
@@ -120,11 +128,21 @@ app-article div.article, div[data-is=app-article] div.article {
       height: 100%;
       background-image: inherit;
       background-size: cover;
-      filter: blur(20px);
+      filter: grayscale(100%);
       position: absolute; }
+    app-article div.article div.picture::after, div[data-is=app-article] div.article div.picture::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      background: linear-gradient(to top, #007180, #07FFAA); }
     app-article div.article div.picture h2, div[data-is=app-article] div.article div.picture h2 {
       display: inline-block;
       position: absolute;
+      z-index: 1;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -137,12 +155,24 @@ app-article div.article, div[data-is=app-article] div.article {
       min-width: 80%; }
   app-article div.article div.content, div[data-is=app-article] div.article div.content {
     margin-top: 20px;
-    padding: 20px;
+    padding: 40px;
+    padding-top: 20px;
     font-size: 18px;
     color: #D6D6D6;
     font-family: "Segoe UI";
     text-align: justify;
-    line-height: 25px; }
+    line-height: 25px;
+    letter-spacing: 1; }
+    app-article div.article div.content p:first-of-type::first-letter, div[data-is=app-article] div.article div.content p:first-of-type::first-letter {
+      font-family: "Belladona";
+      font-size: 30px; }
+    app-article div.article div.content img, div[data-is=app-article] div.article div.content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 2px; }
 
 app-articleitem {
   display: inline-block;
@@ -150,7 +180,11 @@ app-articleitem {
   width: 200px;
   position: relative;
   margin: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease; }
+  app-articleitem:hover {
+    transform: scale(1.05, 1.05); }
   app-articleitem h2 {
     z-index: 1;
     position: absolute;

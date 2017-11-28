@@ -13,6 +13,13 @@ h1,h2{
     }
 }
 
+app-header{
+    display: block;
+    @media screen and (max-width: 860px) {
+        text-align: center;
+    }    
+}
+
 h1
 {
     display: inline-block;
@@ -27,13 +34,14 @@ div.jade
 {
     background-image: url("./../jade.png");
     width: 170px;
-    height: 500px;
+    height: 250px;
     position: fixed;
     top: 50%;
     right: 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
     transform: translateY(-50%);
+    background-position: 80px;
 
     @media screen and (max-height: 630px) {
         display: none;
@@ -46,16 +54,16 @@ div.jade
 
 div.jadouste
 {
-    background-image: url('./../jade.png');
+    background-image: url("./../jade.png");
     width: 170px;
-    height: 500px;
+    height: 250px;
     position: fixed;
     top: 50%;
     left: 0;
     background-repeat: no-repeat;
-    background-size: cover;
-    transform: translateY(-50%);
-    background-position: 100%;
+    background-size: auto 100%;
+    transform: translateY(-50%) rotateY(180deg);
+    background-position: 80px;
 
     @media screen and (max-height: 630px) {
         display: none;
