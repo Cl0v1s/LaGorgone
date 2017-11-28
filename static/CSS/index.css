@@ -84,7 +84,7 @@ div.jade {
   @media screen and (max-height: 630px) {
     div.jade {
       display: none; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     div.jade {
       display: none; } }
 
@@ -102,14 +102,14 @@ div.jadouste {
   @media screen and (max-height: 630px) {
     div.jadouste {
       display: none; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     div.jadouste {
       display: none; } }
 
 app-article div.article, div[data-is=app-article] div.article {
   display: block;
   margin: auto;
-  max-width: 520px;
+  max-width: 720px;
   text-align: center;
   margin-top: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
