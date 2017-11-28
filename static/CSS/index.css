@@ -45,7 +45,9 @@ table {
 
 @font-face {
   font-family: "Belladona";
-  src: url("./static/Belladona.otf") format("truetype"); }
+  src: url("./../Belladona.otf") format("truetype");
+}
+
 
 body {
   background-color: #191919;
