@@ -25,7 +25,8 @@ let Router =
     {
         route("", function(){
             let request = App.request("http://www.clovis-portron.cf/carnets/backend/api/collections/get/articles?token=account-a40b29738f44397c03fd23312f1302");
-
+            App.changePage("app-loader", null);
+            
             request.then(function(response){
                 let articles = response.entries;
                 App.changePage("app-home", {
@@ -40,6 +41,7 @@ let Router =
 
         route("article/*", function(id){
             let request = App.request("http://www.clovis-portron.cf/carnets/backend/api/collections/get/articles?token=account-a40b29738f44397c03fd23312f1302");
+            App.changePage("app-loader", null);
             
             request.then(function(response){
                 let article = null;

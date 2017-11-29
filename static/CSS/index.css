@@ -116,6 +116,86 @@ div.jadouste {
     div.jadouste {
       display: none; } }
 
+@keyframes loader {
+  0% {
+    transform: scaleX(1) scaleY(1); }
+  25% {
+    transform: scaleX(1.05) scaleY(1.05); }
+  50% {
+    transform: scaleX(1) scaleY(1); }
+  75% {
+    transform: scaleX(1.05) scaleY(1.05); } }
+
+@-moz-keyframes loader {
+  0% {
+    -moz-transform: scaleX(1) scaleY(1); }
+  25% {
+    -moz-transform: scaleX(1.05) scaleY(1.05); }
+  50% {
+    -moz-transform: scaleX(1) scaleY(1); }
+  75% {
+    -moz-transform: scaleX(1.05) scaleY(1.05); } }
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: scaleX(1) scaleY(1); }
+  25% {
+    -webkit-transform: scaleX(1.05) scaleY(1.05); }
+  50% {
+    -webkit-transform: scaleX(1) scaleY(1); }
+  75% {
+    -webkit-transform: scaleX(1.05) scaleY(1.05); } }
+
+@-o-keyframes loader {
+  0% {
+    -o-transform: scaleX(1) scaleY(1); }
+  25% {
+    -o-transform: scaleX(1.05) scaleY(1.05); }
+  50% {
+    -o-transform: scaleX(1) scaleY(1); }
+  75% {
+    -o-transform: scaleX(1.05) scaleY(1.05); } }
+
+@-ms-keyframes loader {
+  app-loader 0%, div[data-is=app-loader] 0% {
+    -ms-transform: scaleX(1) scaleY(1); }
+  app-loader 25%, div[data-is=app-loader] 25% {
+    -ms-transform: scaleX(1.05) scaleY(1.05); }
+  app-loader 50%, div[data-is=app-loader] 50% {
+    -ms-transform: scaleX(1) scaleY(1); }
+  app-loader 75%, div[data-is=app-loader] 75% {
+    -ms-transform: scaleX(1.05) scaleY(1.05); } }
+
+app-loader > div, div[data-is=app-loader] > div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center; }
+  app-loader > div img, div[data-is=app-loader] > div img {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    animation: loader linear 4s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation: loader linear 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: loader linear 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: loader linear 4s;
+    -o-animation-iteration-count: infinite;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: loader linear 4s;
+    -ms-animation-iteration-count: infinite;
+    -ms-transform-origin: 50% 50%; }
+
 app-article div.article, div[data-is=app-article] div.article {
   display: block;
   margin: auto;

@@ -34,6 +34,7 @@
         <script src="tags/ArticleItem.tag.html" type="riot/tag"></script>
         <script src="tags/ArticleList.tag.html" type="riot/tag"></script>
         <script src="tags/Home.tag.html" type="riot/tag"></script>
+        <script src="tags/Loader.tag.html" type="riot/tag"></script>
         
 
         <script>
@@ -44,6 +45,12 @@
     </head>
     <body>
         <noscript>Cette application ne peut fonctionner sans Javascript. Veuillez l'activer, mettre à jour votre navigateur ou essayer à nouveau depuis un autre navigateur.</noscript>
-        <div id="app"></div>
+        <div id="app" data-is="app-loader">
+            <div>
+                    <img src="./static/icon.png">
+                    
+                <h1>La Gorgone</h1>
+            </div>
+        </div>
     </body>
 </html>
