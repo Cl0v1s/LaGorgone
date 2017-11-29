@@ -30,6 +30,20 @@ h1
 
 }
 
+em{
+    font-style: italic;
+}
+
+strong 
+{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: $color-text-third;
+}
+
 div.jade
 {
     background-image: url("./../jade.png");

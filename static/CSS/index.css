@@ -70,6 +70,16 @@ h1 {
   font-size: 30px;
   color: #07FFAA; }
 
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: #007180; }
+
 div.jade {
   background-image: url("./../jade.png");
   width: 170px;
