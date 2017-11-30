@@ -74,7 +74,7 @@ em {
   font-style: italic; }
 
 ul {
-  font-style: inside; }
+  list-style: inside; }
 
 strong {
   font-weight: 900; }
