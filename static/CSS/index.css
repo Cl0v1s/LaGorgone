@@ -84,16 +84,14 @@ a {
   color: #007180; }
 
 div.jade {
-  background-image: url("./../jade.png");
-  width: 170px;
-  height: 250px;
+  background-image: url(./../ornement.png);
+  width: 270px;
+  height: 350px;
   position: fixed;
-  top: 50%;
+  top: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  transform: translateY(-50%);
-  background-position: 80px; }
+  background-size: 100% auto; }
   @media screen and (max-height: 630px) {
     div.jade {
       display: none; } }
@@ -102,20 +100,19 @@ div.jade {
       display: none; } }
 
 div.jadouste {
-  background-image: url("./../jade.png");
+  background-image: url(./../ornement.png);
   width: 170px;
   height: 250px;
   position: fixed;
-  top: 50%;
+  bottom: 0;
   left: 0;
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  transform: translateY(-50%) rotateY(180deg);
-  background-position: 80px; }
+  background-size: 100% auto;
+  transform: rotateX(180deg) rotateY(180deg); }
   @media screen and (max-height: 630px) {
     div.jadouste {
       display: none; } }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1060px) {
     div.jadouste {
       display: none; } }
 
