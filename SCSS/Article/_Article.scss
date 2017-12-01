@@ -97,6 +97,34 @@ app-article, div[data-is=app-article]
         
             }
         }
+
+        div.pub 
+        {
+            width: 70%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 40px;
+            padding-top: 20px;
+            font-size: 16px;
+            color: #565656;
+            font-family: $font-primary;
+            text-align: center;
+            line-height: 25px;
+            letter-spacing: 1;
+
+            border-top: 5px solid #07FFAA;            
+
+            p:first-of-type::first-letter{
+                font-family: $font-secondary;
+                font-size: 30px;
+            }
+
+            p:first-of-type {
+                font-size: 18px;
+                color: #D6D6D6;  
+                margin-bottom: 20px;
+            }
+        }
     }
 
 

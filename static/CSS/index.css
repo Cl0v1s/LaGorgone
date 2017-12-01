@@ -266,6 +266,26 @@ app-article div.article, div[data-is=app-article] div.article {
       margin: auto;
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
       border-radius: 2px; }
+  app-article div.article div.pub, div[data-is=app-article] div.article div.pub {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 40px;
+    padding-top: 20px;
+    font-size: 16px;
+    color: #565656;
+    font-family: "Segoe UI";
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1;
+    border-top: 5px solid #07FFAA; }
+    app-article div.article div.pub p:first-of-type::first-letter, div[data-is=app-article] div.article div.pub p:first-of-type::first-letter {
+      font-family: "Belladona";
+      font-size: 30px; }
+    app-article div.article div.pub p:first-of-type, div[data-is=app-article] div.article div.pub p:first-of-type {
+      font-size: 18px;
+      color: #D6D6D6;
+      margin-bottom: 20px; }
 
 app-articleitem {
   display: inline-block;
