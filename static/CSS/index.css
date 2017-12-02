@@ -63,6 +63,13 @@ app-header {
     app-header {
       text-align: center; } }
 
+app-footer {
+  display: block;
+  text-align: center;
+  font-family: "Segoe UI";
+  color: #D6D6D6;
+  margin-bottom: 20px; }
+
 h1 {
   display: inline-block;
   margin: 20px;
@@ -245,6 +252,7 @@ app-article div.article, div[data-is=app-article] div.article {
       min-width: 80%; }
   app-article div.article div.content, div[data-is=app-article] div.article div.content {
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 40px;
     padding-top: 20px;
     font-size: 18px;
