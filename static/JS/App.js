@@ -31,56 +31,47 @@ let App =
             if(data == null)
                 data = {};
             
-            var oReq = new XMLHttpRequest();
-            oReq.open(method, address, true);
-            //TODO: ajouter les headers
-            //oReq.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-            //oReq.send(JSON.stringify(data));
-            oReq.send(App.jsonToQuery(data));
-
-            oReq.onreadystatechange = function () 
-            {
-                var DONE = 4; // readyState 4 means the request is done.
-                var OK = 200; // status 200 is a successful return.
-                if (oReq.readyState === DONE) {
-                  if (oReq.status === OK) 
-                  {
-                      var response = JSON.parse(oReq.responseText);
-                        if(address.indexOf(App.Address) == -1)
-                        {
-                            resolve(response);
-                            return;
-                        }
-                        try
-                        {
-                            ErrorHandler.handle(response);
-                            resolve(response);
-                        }
-                        catch(error)
-                        {
-                            if(error.name == ErrorHandler.State.FATAL)
-                            {
-                                if(redirect)
-                                {
-                                    var message = encodeURI(error.message);
-                                    reject(ErrorHandler.State.FATAL);
-                                    route("/error/"+message);
-                                }
-                                else 
-                                {
-                                    ErrorHandler.alertIfError(error);
-                                }
-                            }
-                            else 
-                                reject(error);
-                    }
-                  } else {
-                    var message = encodeURI("Une erreur réseau a eu lieu. Vérifiez votre connexion et réessayez.");
-                    reject(ErrorHandler.State.FATAL);
-                    route("/error/"+message);
-                  }
+            var request = fetch(address, {
+                method: method,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            request.then(function(response){
+                response = response.json();
+                if(address.indexOf(App.Address) == -1)
+                {
+                    resolve(response);
+                    return;
                 }
-            };
+                try
+                {
+                    ErrorHandler.handle(response);
+                    resolve(response);
+                }
+                catch(error)
+                {
+                    if(error.name == ErrorHandler.State.FATAL)
+                    {
+                        if(redirect)
+                        {
+                            var message = encodeURI(error.message);
+                            reject(ErrorHandler.State.FATAL);
+                            route("/error/"+message);
+                        }
+                        else 
+                        {
+                            ErrorHandler.alertIfError(error);
+                        }
+                    }
+                    else 
+                        reject(error);
+                }
+            });
+            request.catch(function(error){
+                var message = encodeURI("Une erreur réseau a eu lieu. Vérifiez votre connexion et réessayez.");
+                reject(ErrorHandler.State.FATAL);
+                route("/error/"+message);
+            });
         });
     },
 
