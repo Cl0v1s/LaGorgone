@@ -29,6 +29,49 @@ app-footer
     margin-bottom: 20px;
 }
 
+app-sponsors
+{
+    display: block;
+    text-align: left;
+    font-family: "Segoe UI";
+    color: #D6D6D6;
+    margin-bottom: 20px;
+    width: 218px;
+    /* height: 250px; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    background-color: rgba(36,36,36, 0.5);
+
+    div{
+        width: 100%;
+        margin: auto;
+        ul {
+            text-align: left;
+            list-style: none;
+        }
+    }
+
+    @media screen and (max-width: 1230px) {
+        width: 170px;
+    }
+
+    @media screen and (max-width: 1130px) {
+        width: 100%;
+        position: static;
+        margin: 0;
+        text-align: center;
+        div {
+            width: 20%;
+        }
+
+    }
+}
+
 h1
 {
     display: inline-block;
@@ -37,6 +80,11 @@ h1
     font-size: 30px;
     color: $color-text-secondary;
 
+}
+
+h2
+{
+    margin-bottom: 10px;
 }
 
 em{
@@ -69,17 +117,18 @@ div.jade
     background-repeat: no-repeat;
     background-size: 100% auto;
 
-    @media screen and (max-height: 630px) {
+    /*@media screen and (max-height: 630px) {
         display: none;
-    }
+    }*/
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1330px) {
         display: none;
     }
 }
 
 div.jadouste
 {
+    display: none;
     background-image: url(./../ornement.png);
     width: 170px;
     height: 250px;

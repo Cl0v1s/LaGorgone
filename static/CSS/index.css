@@ -70,12 +70,49 @@ app-footer {
   color: #D6D6D6;
   margin-bottom: 20px; }
 
+app-sponsors {
+  display: block;
+  text-align: left;
+  font-family: "Segoe UI";
+  color: #D6D6D6;
+  margin-bottom: 20px;
+  width: 218px;
+  /* height: 250px; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  background-color: rgba(36, 36, 36, 0.5); }
+  app-sponsors div {
+    width: 100%;
+    margin: auto; }
+    app-sponsors div ul {
+      text-align: left;
+      list-style: none; }
+  @media screen and (max-width: 1230px) {
+    app-sponsors {
+      width: 170px; } }
+  @media screen and (max-width: 1130px) {
+    app-sponsors {
+      width: 100%;
+      position: static;
+      margin: 0;
+      text-align: center; }
+      app-sponsors div {
+        width: 20%; } }
+
 h1 {
   display: inline-block;
   margin: 20px;
   letter-spacing: 5;
   font-size: 30px;
   color: #07FFAA; }
+
+h2 {
+  margin-bottom: 10px; }
 
 em {
   font-style: italic; }
@@ -98,15 +135,16 @@ div.jade {
   top: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-size: 100% auto; }
-  @media screen and (max-height: 630px) {
-    div.jade {
-      display: none; } }
-  @media screen and (max-width: 960px) {
+  background-size: 100% auto;
+  /*@media screen and (max-height: 630px) {
+        display: none;
+    }*/ }
+  @media screen and (max-width: 1330px) {
     div.jade {
       display: none; } }
 
 div.jadouste {
+  display: none;
   background-image: url(./../ornement.png);
   width: 170px;
   height: 250px;
@@ -264,6 +302,9 @@ app-article div.article, div[data-is=app-article] div.article {
     app-article div.article div.content p:first-of-type::first-letter, div[data-is=app-article] div.article div.content p:first-of-type::first-letter {
       font-family: "Belladona";
       font-size: 30px; }
+    @media screen and (max-width: 640px) {
+      app-article div.article div.content, div[data-is=app-article] div.article div.content {
+        text-justify: inter-character; } }
     app-article div.article div.content img, div[data-is=app-article] div.article div.content img {
       max-width: 100%;
       height: auto;

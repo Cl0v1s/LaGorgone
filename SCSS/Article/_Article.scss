@@ -86,6 +86,9 @@ app-article, div[data-is=app-article]
                 font-size: 30px;
             }
 
+            @media screen and (max-width: 640px) {
+                text-justify: inter-character;
+            }
 
             img 
             {
