@@ -47,6 +47,10 @@ table {
   font-family: "Belladona";
   src: url("./../Belladona.otf") format("truetype"); }
 
+@font-face {
+  font-family: "Segoe UI";
+  src: url("./../SegoeUI.ttf") format("truetype"); }
+
 body {
   background-color: #191919;
   background-image: url("./../bg.png"); }
