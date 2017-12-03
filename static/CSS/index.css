@@ -75,7 +75,7 @@ app-footer {
   margin-bottom: 20px; }
 
 app-sponsors {
-  display: block;
+  display: none;
   text-align: left;
   font-family: "Segoe UI";
   color: #D6D6D6;
