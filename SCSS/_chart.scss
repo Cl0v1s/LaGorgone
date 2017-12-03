@@ -3,6 +3,11 @@
     src: url("./../Belladona.otf") format("truetype");
 }
 
+@font-face{
+    font-family: "Segoe UI";
+    src: url("./../SegoeUI.ttf") format("truetype");
+}
+
 $font-primary: "Segoe UI";
 $font-secondary: "Belladona";
 
