@@ -6,6 +6,7 @@ app-article, div[data-is=app-article]
         max-width: 720px;
         text-align: center;
         margin-top: 20px;
+        margin-bottom: 20px;
 
         //border-left: 5px solid #07FFAA;
         //border-right: 5px solid #007180;
@@ -127,6 +128,11 @@ app-article, div[data-is=app-article]
                 font-size: 18px;
                 color: #D6D6D6;  
                 margin-bottom: 20px;
+            }
+
+            &>div>div 
+            {
+                margin: auto;
             }
         }
     }

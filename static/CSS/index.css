@@ -251,6 +251,7 @@ app-article div.article, div[data-is=app-article] div.article {
   max-width: 720px;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   border-radius: 2px; }
   app-article div.article div.picture, div[data-is=app-article] div.article div.picture {
@@ -336,6 +337,8 @@ app-article div.article, div[data-is=app-article] div.article {
       font-size: 18px;
       color: #D6D6D6;
       margin-bottom: 20px; }
+    app-article div.article div.pub > div > div, div[data-is=app-article] div.article div.pub > div > div {
+      margin: auto; }
 
 app-articleitem {
   display: inline-block;
