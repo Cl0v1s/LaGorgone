@@ -47,6 +47,10 @@ table {
   font-family: "Belladona";
   src: url("./../Belladona.otf") format("truetype"); }
 
+@font-face {
+  font-family: "Segoe UI";
+  src: url("./../SegoeUI.ttf") format("truetype"); }
+
 body {
   background-color: #191919;
   background-image: url("./../bg.png"); }
@@ -63,12 +67,56 @@ app-header {
     app-header {
       text-align: center; } }
 
+app-footer {
+  display: block;
+  text-align: center;
+  font-family: "Segoe UI";
+  color: #D6D6D6;
+  margin-bottom: 20px; }
+
+app-sponsors {
+  display: none;
+  text-align: left;
+  font-family: "Segoe UI";
+  color: #D6D6D6;
+  margin-bottom: 20px;
+  width: 218px;
+  /* height: 250px; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  background-color: rgba(36, 36, 36, 0.5); }
+  app-sponsors div {
+    width: 100%;
+    margin: auto; }
+    app-sponsors div ul {
+      text-align: left;
+      list-style: none; }
+  @media screen and (max-width: 1230px) {
+    app-sponsors {
+      width: 170px; } }
+  @media screen and (max-width: 1130px) {
+    app-sponsors {
+      width: 100%;
+      position: static;
+      margin: 0;
+      text-align: center; }
+      app-sponsors div {
+        width: 20%; } }
+
 h1 {
   display: inline-block;
   margin: 20px;
   letter-spacing: 5;
   font-size: 30px;
   color: #07FFAA; }
+
+h2 {
+  margin-bottom: 10px; }
 
 em {
   font-style: italic; }
@@ -84,38 +132,36 @@ a {
   color: #007180; }
 
 div.jade {
-  background-image: url("./../jade.png");
-  width: 170px;
-  height: 250px;
+  background-image: url(./../ornement.png);
+  width: 270px;
+  height: 350px;
   position: fixed;
-  top: 50%;
+  top: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  transform: translateY(-50%);
-  background-position: 80px; }
-  @media screen and (max-height: 630px) {
-    div.jade {
-      display: none; } }
-  @media screen and (max-width: 960px) {
+  background-size: 100% auto;
+  /*@media screen and (max-height: 630px) {
+        display: none;
+    }*/ }
+  @media screen and (max-width: 1330px) {
     div.jade {
       display: none; } }
 
 div.jadouste {
-  background-image: url("./../jade.png");
+  display: none;
+  background-image: url(./../ornement.png);
   width: 170px;
   height: 250px;
   position: fixed;
-  top: 50%;
+  bottom: 0;
   left: 0;
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  transform: translateY(-50%) rotateY(180deg);
-  background-position: 80px; }
+  background-size: 100% auto;
+  transform: rotateX(180deg) rotateY(180deg); }
   @media screen and (max-height: 630px) {
     div.jadouste {
       display: none; } }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1060px) {
     div.jadouste {
       display: none; } }
 
@@ -248,6 +294,7 @@ app-article div.article, div[data-is=app-article] div.article {
       min-width: 80%; }
   app-article div.article div.content, div[data-is=app-article] div.article div.content {
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 40px;
     padding-top: 20px;
     font-size: 18px;
@@ -259,6 +306,9 @@ app-article div.article, div[data-is=app-article] div.article {
     app-article div.article div.content p:first-of-type::first-letter, div[data-is=app-article] div.article div.content p:first-of-type::first-letter {
       font-family: "Belladona";
       font-size: 30px; }
+    @media screen and (max-width: 640px) {
+      app-article div.article div.content, div[data-is=app-article] div.article div.content {
+        text-justify: inter-character; } }
     app-article div.article div.content img, div[data-is=app-article] div.article div.content img {
       max-width: 100%;
       height: auto;

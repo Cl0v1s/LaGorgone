@@ -20,6 +20,58 @@ app-header{
     }    
 }
 
+app-footer
+{
+    display: block;
+    text-align: center;
+    font-family: $font-primary;
+    color: #D6D6D6;
+    margin-bottom: 20px;
+}
+
+app-sponsors
+{
+    display: none;
+    text-align: left;
+    font-family: "Segoe UI";
+    color: #D6D6D6;
+    margin-bottom: 20px;
+    width: 218px;
+    /* height: 250px; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    background-color: rgba(36,36,36, 0.5);
+
+    div{
+        width: 100%;
+        margin: auto;
+        ul {
+            text-align: left;
+            list-style: none;
+        }
+    }
+
+    @media screen and (max-width: 1230px) {
+        width: 170px;
+    }
+
+    @media screen and (max-width: 1130px) {
+        width: 100%;
+        position: static;
+        margin: 0;
+        text-align: center;
+        div {
+            width: 20%;
+        }
+
+    }
+}
+
 h1
 {
     display: inline-block;
@@ -28,6 +80,11 @@ h1
     font-size: 30px;
     color: $color-text-secondary;
 
+}
+
+h2
+{
+    margin-bottom: 10px;
 }
 
 em{
@@ -51,44 +108,42 @@ a{
 
 div.jade
 {
-    background-image: url("./../jade.png");
-    width: 170px;
-    height: 250px;
+    background-image: url(./../ornement.png);
+    width: 270px;
+    height: 350px;
     position: fixed;
-    top: 50%;
+    top: 0;
     right: 0;
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    transform: translateY(-50%);
-    background-position: 80px;
+    background-size: 100% auto;
 
-    @media screen and (max-height: 630px) {
+    /*@media screen and (max-height: 630px) {
         display: none;
-    }
+    }*/
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1330px) {
         display: none;
     }
 }
 
 div.jadouste
 {
-    background-image: url("./../jade.png");
+    display: none;
+    background-image: url(./../ornement.png);
     width: 170px;
     height: 250px;
     position: fixed;
-    top: 50%;
+    bottom: 0;
     left: 0;
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    transform: translateY(-50%) rotateY(180deg);
-    background-position: 80px;
+    background-size: 100% auto;
+    transform: rotateX(180deg) rotateY(180deg);
 
     @media screen and (max-height: 630px) {
         display: none;
     }
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1060px) {
         display: none;
     }
 }
