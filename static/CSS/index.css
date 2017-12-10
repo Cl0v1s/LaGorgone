@@ -62,10 +62,11 @@ h1, h2 {
     color: #07FFAA; }
 
 app-header {
-  display: block; }
-  @media screen and (max-width: 860px) {
-    app-header {
-      text-align: center; } }
+  display: block;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  text-align: center; }
+  app-header h1 a {
+    font-size: 50px; }
 
 app-footer {
   display: block;
@@ -132,6 +133,7 @@ a {
   color: #007180; }
 
 div.jade {
+  display: none;
   background-image: url(./../ornement.png);
   width: 270px;
   height: 350px;
@@ -342,8 +344,8 @@ app-article div.article, div[data-is=app-article] div.article {
 
 app-articleitem {
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
   position: relative;
   margin: 20px;
   cursor: pointer;
@@ -403,7 +405,7 @@ app-articleitem {
 app-articlelist {
   display: block;
   margin: auto;
-  max-width: 720px;
+  max-width: 1400px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
