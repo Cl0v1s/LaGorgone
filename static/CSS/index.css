@@ -351,6 +351,10 @@ app-articleitem {
   cursor: pointer;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease; }
+  @media screen and (max-width: 400px) {
+    app-articleitem {
+      width: 200px !important;
+      height: 200px !important; } }
   app-articleitem:hover {
     transform: scale(1.05, 1.05); }
   app-articleitem h2 {

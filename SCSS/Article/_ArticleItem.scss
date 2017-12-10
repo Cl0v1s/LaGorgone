@@ -1,8 +1,18 @@
 app-articleitem
 {
     display: inline-block;
+
+
+
+
     height: 400px;
     width: 400px;
+
+    @media screen and (max-width: 400px) {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
     position: relative;
     margin: 20px;
     cursor: pointer;
