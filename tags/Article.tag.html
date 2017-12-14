@@ -6,7 +6,7 @@
         </div>
         <div class="content" ref="content">
         </div>
-        <div class="pub">
+        <div class="pub" ref="pub">
             <p>
                 - Vous avez terminé l'article, merci de l'avoir lu ! -<br>
                 Nous espérons que nous avons pu vous partager quelque chose d'intéressant
@@ -15,10 +15,6 @@
                 Pour soutenir notre site et participer à son développement, vous pouvez visionner une courte publicité ci-dessous.<br>
                 Quelques secondes suffisent à nous aider !
             </p>
-
-            <div>
-                <script data-cfasync='false' type='text/javascript' src='//p259904.clksite.com/adServe/banners?tid=259904_500126_0'></script>
-            </div>
         </div>
     </div>
     <app-footer></app-footer>
@@ -43,6 +39,9 @@
                 document.title = "La Gorgone: "+tag.article.name;
                 document.head.innerHTML += "<meta name='description' content='"+tag.article.content.slice(0, -Math.abs(tag.article.content.length - 160)).replace(/<.*?>/g, "")+"'>";
             }
+            let s = document.createElement( 'script' );
+            s.setAttribute( 'src', "//p259904.clksite.com/adServe/banners?tid=259904_500126_0" );
+            tag.refs.pub.appendChild(s);
         });
     </script>
 </app-article>
