@@ -130,9 +130,13 @@ app-article, div[data-is=app-article]
                 margin-bottom: 20px;
             }
 
-            &>div>div 
+            &>*
             {
-                margin: auto;
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
