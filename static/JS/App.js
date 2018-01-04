@@ -23,16 +23,16 @@ let App =
      * address : concaténé après App.Address, addresse à interroger
      * data : données de la requête
      */
-    request : function(address, data, method = "POST", redirect = true)
+    request : function(address, data, method = "GET", redirect = true)
     {
         return new Promise(function(resolve, reject)
         {
             var href=window.location.href;
             if(data == null)
                 data = {};
-            
             var request = fetch(address, {
                 method: method,
+                mode: 'cors',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
