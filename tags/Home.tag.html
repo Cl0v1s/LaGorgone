@@ -11,8 +11,14 @@
         tag.on("before-mount", function(){
             tag.articles = tag.opts.articles;
 
+
             if(tag.articles == null)
                 throw new Error("Articles cant be null.");
+        });
+
+        tag.on("mount", function()
+        {
+            document.title = "La Gorgone";
         });
 
     </script>
