@@ -8,5 +8,10 @@
             </div>
     <script>
         var tag = this;
+
+        tag.on("before-mount", function()
+    {
+        console.log(tag.opts);
+    });
     </script>
 </app-header>
