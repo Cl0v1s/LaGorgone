@@ -1,5 +1,5 @@
 <app-articleItem>
-    <a href="/article/{article._id}">
+    <a href="{ opts.baseUrl }/article/{article._id}">
     <div class="picture" style="background-image: url('{article.picture.path}');">
             <h2>
                 { article.name }

@@ -16,6 +16,7 @@ var home = require("./tags/Home.tag");
 
 const page = 
 {
+    "base" : "/test",
     "title" : "La Gorgone",
     "description" : "La Gorgone.",
     "build" : function(content){
@@ -34,7 +35,7 @@ const page =
         
                 <meta charset="utf-8">
                 <title>${page.title}</title>
-                <link rel="icon" type="image/ico" href="static/icon.png">
+                <link rel="icon" type="image/ico" href="${page.base}/static/icon.png">
                 <meta name="viewport" content="width=device-width, user-scalable=no">
                 <meta name='description' content='${page.description}'>
 
@@ -45,7 +46,7 @@ const page =
                 <!-- Pas de CSS externe -->
         
                 <!-- Ajout du CSS interne -->
-                <link rel="stylesheet" href="static/CSS/index.css">
+                <link rel="stylesheet" href="${page.base}/static/CSS/index.css">
             </head>
             <body>
                 ${content}
@@ -92,7 +93,9 @@ http.createServer(function(req, response){
     console.log(path);
 
     let request = null;
-    let data = {};
+    let data = {
+        "baseUrl" : page.base
+    };
 
     switch(path.split("/")[1])
     {
