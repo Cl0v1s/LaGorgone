@@ -90,7 +90,7 @@ function servePage(response, tag, data)
 http.createServer(function(req, response){
 
     path = url.parse(req.url).pathname;
-    console.log(path);
+    //console.log(path);
 
     let request = null;
     let data = {
