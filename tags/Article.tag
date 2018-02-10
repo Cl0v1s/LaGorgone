@@ -16,18 +16,14 @@
 
         tag.on("before-mount", function(){
             tag.article = tag.opts.article;
-
             if(tag.article == null)
-                Router.redirect("/");
-
+                throw new Error("Article cant be null.");
         });
 
         tag.on("mount", function(){
             if(tag.article != null)
             {
                 tag.refs.content.innerHTML = tag.article.content;
-                document.title = "La Gorgone: "+tag.article.name;
-                document.head.innerHTML += "<meta name='description' content='"+tag.article.content.slice(0, -Math.abs(tag.article.content.length - 160)).replace(/<.*?>/g, "")+"'>";
             }
         });
     </script>

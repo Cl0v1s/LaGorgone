@@ -1,6 +1,6 @@
 <app-loader>
     <div>
-            <img src="./static/icon.png">
+            <img src="/static/icon.png">
             
         <h1>La Gorgone</h1>
     </div>

@@ -1,5 +1,5 @@
 <app-articleItem>
-    <a href="#/article/{article._id}">
+    <a href="/article/{article._id}">
     <div class="picture" style="background-image: url('{article.picture.path}');">
             <h2>
                 { article.name }
@@ -14,10 +14,5 @@
         tag.on("before-mount", function(){
             tag.article = tag.opts.article;
         });
-
-        tag.details = function(evt){
-            var id = evt.target.getAttribute("alt");
-            Router.redirect("article/"+id);
-        };
     </script>
 </app-articleItem>
