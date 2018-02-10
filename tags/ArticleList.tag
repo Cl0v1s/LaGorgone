@@ -1,6 +1,6 @@
 <app-articlelist>
 
-    <app-articleitem each='{ article in articles }' article='{ article }' baseUrl = "{ opts.baseUrl }"></app-articleitem>
+    <app-articleitem each='{ article in articles }' article='{ article }'></app-articleitem>
 
     <script>
         var tag = this;    

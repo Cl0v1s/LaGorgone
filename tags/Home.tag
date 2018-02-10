@@ -1,7 +1,7 @@
 <app-home>
     
-            <app-header baseUrl = "{ opts.baseUrl }"></app-header>
-            <app-articlelist baseUrl = "{ opts.baseUrl }" articles="{ articles }"></app-articlelist>
+            <app-header></app-header>
+            <app-articlelist articles="{ articles }"></app-articlelist>
             <app-footer></app-footer>
             <app-sponsors></app-sponsors>
             <script>
