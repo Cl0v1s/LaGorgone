@@ -1,5 +1,5 @@
 <app-articleItem>
-    <a href="/test/article/{article._id}">
+    <a href="/carnets/article/{article._id}">
     <div class="picture" style="background-image: url('{article.picture.path}');">
             <h2>
                 { article.name }

@@ -101,7 +101,7 @@ http.createServer(function(req, response){
     {
         case "":
         case "home":
-            request = fetch("http://blog.lagorgone.cf/carnets/backend/api/collections/get/articles?token=account-a40b29738f44397c03fd23312f1302", {
+            request = fetch("http://blog.lagorgone.cf/carnets-backend/api/collections/get/articles?token=account-a40b29738f44397c03fd23312f1302", {
                 method : "POST",
                 body : JSON.stringify({sort: {_created:-1}}),
                 headers: { 'Content-Type': 'application/json' }
@@ -121,7 +121,7 @@ http.createServer(function(req, response){
                 return;
             }
             let id = parts[2];
-            request = fetch("http://blog.lagorgone.cf/carnets/backend/api/collections/get/articles?token=account-a40b29738f44397c03fd23312f1302", {
+            request = fetch("http://blog.lagorgone.cf/carnets-backend/api/collections/get/articles?token=account-a40b29738f44397c03fd23312f1302", {
                 method : "POST",
                 body : JSON.stringify({filter: {_id:id}}),
                 headers: { 'Content-Type': 'application/json' }

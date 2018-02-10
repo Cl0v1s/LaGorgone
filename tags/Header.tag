@@ -1,5 +1,5 @@
 <app-header>
-        <h1><a href="/test">La Gorgone</a></h1>
+        <h1><a href="/carnets">La Gorgone</a></h1>
         <div class="jade">
 
         </div>
