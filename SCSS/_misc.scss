@@ -30,7 +30,15 @@ app-footer
     text-align: center;
     font-family: $font-primary;
     color: #D6D6D6;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
+    //background-color: rgb(36,36,36);
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+    div 
+    {
+        margin-bottom: 5px;
+    }
 }
 
 app-sponsors

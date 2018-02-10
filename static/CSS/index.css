@@ -73,7 +73,10 @@ app-footer {
   text-align: center;
   font-family: "Segoe UI";
   color: #D6D6D6;
-  margin-bottom: 20px; }
+  padding: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+  app-footer div {
+    margin-bottom: 5px; }
 
 app-sponsors {
   display: none;
@@ -253,7 +256,6 @@ app-article div.article, div[data-is=app-article] div.article {
   max-width: 1400px;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   border-radius: 2px; }
   app-article div.article div.picture, div[data-is=app-article] div.article div.picture {
