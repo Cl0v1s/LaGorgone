@@ -133,7 +133,7 @@ http.createServer(function(req, response){
                 else
                 {
                     page.title = "La Gorgone: "+data.article.name;
-                    page.description = data.article.content.slice(0, -Math.abs(data.article.content.length - 160)).replace(/<.*?>/g, "");
+                    page.description = data.article.description;
                     servePage(response, article, data);
                 }
             });  
