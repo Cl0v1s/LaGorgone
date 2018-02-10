@@ -34,7 +34,7 @@ const page =
         
                 <meta charset="utf-8">
                 <title>${page.title}</title>
-                <link rel="icon" type="image/ico" href="/static/icon.png">
+                <link rel="icon" type="image/ico" href="static/icon.png">
                 <meta name="viewport" content="width=device-width, user-scalable=no">
                 <meta name='description' content='${page.description}'>
 
@@ -45,7 +45,7 @@ const page =
                 <!-- Pas de CSS externe -->
         
                 <!-- Ajout du CSS interne -->
-                <link rel="stylesheet" href="/static/CSS/index.css">
+                <link rel="stylesheet" href="static/CSS/index.css">
             </head>
             <body>
                 ${content}
