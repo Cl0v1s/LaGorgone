@@ -105,6 +105,8 @@ http.createServer(function(req, response){
             });
             request.then(res => res.json()).then(function(results){
                 data.articles = results.entries;
+                page.title = "La Gorgone";
+                page.description = "La Gorgone.";
                 servePage(response, home, data);
             });
         break;
