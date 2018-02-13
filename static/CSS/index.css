@@ -256,8 +256,10 @@ app-article div.article, div[data-is=app-article] div.article {
   max-width: 1400px;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 50px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 2px; }
+  border-radius: 2px;
+  border-bottom: 5px solid #007180; }
   app-article div.article div.picture, div[data-is=app-article] div.article div.picture {
     height: 240px;
     background-size: 0 0;

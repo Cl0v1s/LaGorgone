@@ -6,7 +6,7 @@ app-article, div[data-is=app-article]
         max-width: 1400px;
         text-align: center;
         margin-top: 20px;
-        //margin-bottom: 20px;
+        margin-bottom: 50px;
 
         //border-left: 5px solid #07FFAA;
         //border-right: 5px solid #007180;
@@ -15,6 +15,7 @@ app-article, div[data-is=app-article]
         box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
         border-radius: 2px;
         //margin-bottom: 20px;
+        border-bottom: 5px solid #007180;
 
         div.picture{
             height: 240px;
