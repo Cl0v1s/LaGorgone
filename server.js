@@ -19,6 +19,7 @@ const page =
     "base" : "/carnets",
     "title" : "La Gorgone",
     "description" : "La Gorgone.",
+    "image" : null,
     "build" : function(content){
         return `<!DOCTYPE html5>
         <html>
@@ -38,6 +39,7 @@ const page =
                 <link rel="icon" type="image/ico" href="${page.base}/static/icon.png">
                 <meta name="viewport" content="width=device-width, user-scalable=no">
                 <meta name='description' content='${page.description}'>
+                <meta property="og:image" content="${page.image}" />
 
                 <!-- ================================================ -->
                 <!-- Ajout du CSS -->
@@ -110,6 +112,7 @@ http.createServer(function(req, response){
                 data.articles = results.entries;
                 page.title = "La Gorgone";
                 page.description = "La Gorgone.";
+                page.image = null;
                 servePage(response, home, data);
             });
         break;
@@ -134,6 +137,7 @@ http.createServer(function(req, response){
                 {
                     page.title = "La Gorgone: "+data.article.name;
                     page.description = data.article.description;
+                    page.image = data.article.picture.path;
                     servePage(response, article, data);
                 }
             });  

@@ -250,6 +250,13 @@ app-loader > div, div[data-is=app-loader] > div {
     -ms-animation-iteration-count: infinite;
     -ms-transform-origin: 50% 50%; }
 
+app-article .share img, div[data-is=app-article] .share img {
+  width: 35px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline; }
+
 app-article div.article, div[data-is=app-article] div.article {
   display: block;
   margin: auto;
