@@ -76,16 +76,25 @@ app-article, div[data-is=app-article]
             margin-bottom: 20px;
             padding: 40px;
             padding-top: 20px;
-            font-size: 18px;
-            color: #D6D6D6;
+            font-size: 22px;
+            color: #E6E6E6;
             font-family: $font-primary;
             text-align: justify;
-            line-height: 25px;
-            letter-spacing: 1;
+            line-height: 32px;
+            letter-spacing: 1px;
 
-            p:first-of-type::first-letter{
-                font-family: $font-secondary;
-                font-size: 30px;
+            p:first-of-type{
+                
+                /*font-size: 26px;
+                color: white;
+                text-align: left;
+                line-height: 36px;
+                // letter-spacing: 1px;*/
+
+                &::first-letter{
+                    font-family: $font-secondary;
+                    font-size: 30px;
+                }
             }
 
             @media screen and (max-width: 640px) {

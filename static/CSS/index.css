@@ -304,15 +304,21 @@ app-article div.article, div[data-is=app-article] div.article {
     margin-bottom: 20px;
     padding: 40px;
     padding-top: 20px;
-    font-size: 18px;
-    color: #D6D6D6;
+    font-size: 22px;
+    color: #E6E6E6;
     font-family: "Segoe UI";
     text-align: justify;
-    line-height: 25px;
-    letter-spacing: 1; }
-    app-article div.article div.content p:first-of-type::first-letter, div[data-is=app-article] div.article div.content p:first-of-type::first-letter {
-      font-family: "Belladona";
-      font-size: 30px; }
+    line-height: 32px;
+    letter-spacing: 1px; }
+    app-article div.article div.content p:first-of-type, div[data-is=app-article] div.article div.content p:first-of-type {
+      /*font-size: 26px;
+                color: white;
+                text-align: left;
+                line-height: 36px;
+                // letter-spacing: 1px;*/ }
+      app-article div.article div.content p:first-of-type::first-letter, div[data-is=app-article] div.article div.content p:first-of-type::first-letter {
+        font-family: "Belladona";
+        font-size: 30px; }
     @media screen and (max-width: 640px) {
       app-article div.article div.content, div[data-is=app-article] div.article div.content {
         text-justify: inter-character; } }

@@ -17,6 +17,7 @@ var home = require("./tags/Home.tag");
 const page = 
 {
     "base" : "/carnets",
+    //"base" : "",
     "title" : "La Gorgone",
     "description" : "La Gorgone.",
     "build" : function(content){
